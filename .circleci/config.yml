@@ -12,18 +12,24 @@ jobs:
       - run:
           name: Run Tests
           command: npm test
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
   release:
     docker:
       - image: circleci/node:12
     steps:
-      - checkout
-      - setup_remote_docker
+      - attach_workspace:
+          at: ~/repo
       - run:
-          name:  Build Application
-          command: npm install
-      - run:
-          name: Run Tests
-          command: npm build
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_CONFIG_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish to NPM
           command: npm publish
