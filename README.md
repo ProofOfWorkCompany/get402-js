@@ -11,7 +11,9 @@ npm install --save get402
 
 ## Usage
 
-You may import the entire library or load only specific objects as needed
+See https://get402.com/docs.html for complete documentation.
+
+You may import the entire library or load only specific objects as needed.
 
 ```
 
