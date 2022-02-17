@@ -125,6 +125,24 @@ describe('Get402.com API Client', () => {
 
     })
 
+    it('simplified credits purchase', async () => {
+
+      let app: App = App.createNew()
+
+      var privatekey = new bsv.PrivateKey(process.env.GET402_PRIVATE_KEY)
+
+      let client = Client.fromPrivateKey(app, privatekey)
+
+      let balance = await client.getBalance()
+
+      let payment = await client.buyCredits(10)
+
+      let newBalance = await client.getBalance()
+    
+      expect(newBalance).to.be.equal(balance + 10)
+
+    })
+
 
   })
 

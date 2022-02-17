@@ -154,11 +154,9 @@ by sending satoshis to the client identifier address. Once funds arrive they wil
 
 const client = app.createClient(process.env.GET402_CLIENT_ID, process.env.GET402_CLIENT_PRIVATEKEY)
 
-let paymentRequest = await client.requestBuyCredits(10)
+let result = await client.buyCredis(10)
 
-let payment = await client.sendPayment(paymentRequest)
-
-console.log(payment)
+console.log(result)
 
 ```
 

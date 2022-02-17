@@ -194,6 +194,13 @@ export class Client {
 
   }
 
+  async buyCredits(credits: Integer): Promise<PaymentRequired> {
+
+    let paymentRequest = await this.requestBuyCredits(credits)
+
+    return this.sendPayment(paymentRequest)
+
+  }
 
   async requestBuyCredits(credits: Integer): Promise<PaymentRequired> {
 
