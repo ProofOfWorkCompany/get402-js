@@ -251,6 +251,12 @@ export class App {
 
   }
 
+  static load(privatekey: string): App {
+
+    return new App(new bsv.PrivateKey(privatekey))
+
+  }
+
   static createNew(): App {
 
     return new App(new bsv.PrivateKey())
@@ -262,6 +268,12 @@ export class App {
     let privatekey = new bsv.PrivateKey()
 
     return Client.fromPrivateKey(this, privatekey)
+
+  }
+
+  loadClient(identifier: string, privatekey?: bsv.PrivateKey): Client {
+
+    return new Client(this, identifier, privatekey)
 
   }
 
