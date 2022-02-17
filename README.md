@@ -1,7 +1,7 @@
 
-# Get402.com Client Javascript
+# Get402 Client Node.js
 
-Easily manage client public keys 
+Build Paid APIs with Ease. This library simplifies offering of APIs that can be accessed only via micropayments
 
 ## Installation
 
