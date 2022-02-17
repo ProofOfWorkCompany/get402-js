@@ -15,7 +15,8 @@ import * as filepay from 'filepay'
 
 type Integer = number;
 
-const apiBase = 'https://get402.com/api'
+//const apiBase = 'https://get402.com/api'
+const apiBase = 'http://localhost:3000/api'
 
 interface Output {
   script: string;
@@ -229,7 +230,7 @@ export class Client {
 
     const message =  JSON.stringify({
       nonce: uuid.v4(),
-      domain: 'https://get402.com'
+      domain: 'get402.com'
     })
 
     const identifier = this.app.identifier
