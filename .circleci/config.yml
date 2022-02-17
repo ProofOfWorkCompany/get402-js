@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   test:
+    working_directory: ~/repo
     docker:
       - image: circleci/node:12
     steps:
@@ -22,6 +23,7 @@ jobs:
           paths: .
 
   release:
+    working_directory: ~/repo
     docker:
       - image: circleci/node:12
     steps:
