@@ -15,8 +15,7 @@ import * as filepay from 'filepay'
 
 type Integer = number;
 
-//const apiBase = 'https://get402.com/api'
-const apiBase = 'http://localhost:3000/api'
+const apiBase = 'https://get402.com/api'
 
 interface Output {
   script: string;
