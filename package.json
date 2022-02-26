@@ -1,8 +1,8 @@
 {
   "name": "get402",
-  "version": "0.1.3",
-  "description": "",
-  "main": "build/index.js",
+  "version": "0.1.4",
+  "description": "Client for Interacting With Paid APIs at get402.com",
+  "main": "build/src/index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --require=ts-node/register tests/*_test.ts --timeout=10000",
     "runtest": "NODE_ENV=test mocha --require=ts-node/register $TEST --timeout=10000"
